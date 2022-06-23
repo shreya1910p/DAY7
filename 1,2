@@ -1,7 +1,18 @@
 // 1. Write a “person” class to hold all the details
 
-
+class person {
+  constructor(name, birthday) {
+    this.name = name;
+    this.birthday = birthday;
+  }
+}
 
 
 
 // 2. write a class to calculate uber price
+class uber {
+  constructor(destination,price) {
+    this.destination = destination;
+    this.price = price;
+   }
+ }
