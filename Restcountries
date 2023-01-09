@@ -1,0 +1,122 @@
+// this is to display all country names
+
+var request=new XMLHttpRequest();
+
+request.open("GET","https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json")
+
+request.send();
+
+request.onload=function(){
+
+    var result=JSON.parse(request.response);//object stored in result 
+    console.log(result);
+    console.log(result[0].name);
+
+for(var i=0;i<=result.length;i++){
+    console.log(result[i].name+" "+result[i].flags);
+}
+
+}
+
+// all countries with population less than 2 lakhs
+
+var request=new XMLHttpRequest();
+
+request.open("GET","https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json")
+
+request.send();
+
+request.onload=function(){
+
+    var result=JSON.parse(request.response);//object stored in result 
+    console.log(result);
+    var res=result.filter((ele)=>
+        ele.population<=200000);
+        console.log(res);
+
+        var final=res.map((ele)=>ele.name);
+        console.log(final);
+
+    }
+    
+   // all countries from asia continent
+   
+   var request=new XMLHttpRequest();
+
+request.open("GET","https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json")
+
+request.send();
+
+request.onload=function(){
+
+    var result=JSON.parse(request.response);//object stored in result 
+    console.log(result);
+    var res=result.filter((ele)=>
+        ele.region="Asia");
+        console.log(res);
+
+        var final=res.map((ele)=>ele.name);
+        console.log(final);
+
+    }
+    
+    print name,capital,flag of each country
+    
+   var request=new XMLHttpRequest();
+
+request.open("GET","https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json")
+
+request.send();
+
+request.onload=function(){
+
+    var result=JSON.parse(request.response);//object stored in result 
+    console.log(result);
+    console.log(result[0].name);
+
+for(var i=0;i<=result.length;i++){
+    console.log(result[i].name+" "+result[i].capital+" "+result[i].flag);
+}
+
+} 
+
+print countries with dollars
+var request=new XMLHttpRequest();
+
+request.open("GET","https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json")
+
+request.send();
+
+request.onload=function(){
+
+    var result=JSON.parse(request.response);//object stored in result 
+    console.log(result);
+    var res=result.filter((ele)=>
+        ele.currencies="United State Dollars");
+        console.log(res);
+
+        var final=res.map((ele)=>ele.name);
+        console.log(final);
+
+    }
+   
+
+// HTML document
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script> 
+</body>
+</html>
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
